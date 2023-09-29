@@ -8,10 +8,10 @@ resource "aws_vpc" "ntier" {
 
  resource "aws_subnet" "subnets" {
           vpc_id    = aws_vpc.ntier.id
-          count     = length(var.subnet_ciders)
-         cidr_block = var.subnet_ciders[count.index]
+          count     = length(var.subnet_name_tags)
+         cidr_block = cidrsubnet(var.cidr_block,8,count.index)
                tags = {
-             "Name" =var.subnet_name_tages[count.index]
+             "Name" =var.subnet_name_tags[count.index]
 }
   availability_zone = var.subnet_azs[count.index]
 }

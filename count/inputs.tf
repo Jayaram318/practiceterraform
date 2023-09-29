@@ -4,10 +4,7 @@ variable "region" {
 variable "cidr_block" {
                type = string
 }
-variable "subnet_ciders" {
-               type = list(string)
-}
-variable "subnet_name_tages" {
+variable "subnet_name_tags" {
                type = list(string)
 }
 variable "subnet_azs" {
