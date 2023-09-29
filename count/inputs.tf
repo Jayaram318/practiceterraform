@@ -1,15 +1,15 @@
 variable "region" {
-  type = string
+               type = string
 }
 variable "cidr_block" {
-  type = string
+               type = string
 }
 variable "subnet_ciders" {
-  type = list(string)
+               type = list(string)
 }
 variable "subnet_name_tages" {
-  type = list(string)
+               type = list(string)
 }
 variable "subnet_azs" {
-  type = list(string)
+               type = list(string)
 }
